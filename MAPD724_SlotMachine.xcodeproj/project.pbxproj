@@ -12,6 +12,9 @@
 		6D9AEF8F20267AD5004F57F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D9AEF8D20267AD5004F57F2 /* Main.storyboard */; };
 		6D9AEF9120267AD5004F57F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D9AEF9020267AD5004F57F2 /* Assets.xcassets */; };
 		6D9AEF9420267AD5004F57F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D9AEF9220267AD5004F57F2 /* LaunchScreen.storyboard */; };
+		6D9AEF9C202685CA004F57F2 /* BackgroundSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9AEF9B202685CA004F57F2 /* BackgroundSet.swift */; };
+		6D9AEF9F202692CB004F57F2 /* PhosphateSolid Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D9AEF9E202692CB004F57F2 /* PhosphateSolid Medium.ttf */; };
+		6D9AEFA020269366004F57F2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D9AEF9520267AD5004F57F2 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,8 @@
 		6D9AEF9020267AD5004F57F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D9AEF9320267AD5004F57F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D9AEF9520267AD5004F57F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D9AEF9B202685CA004F57F2 /* BackgroundSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSet.swift; sourceTree = "<group>"; };
+		6D9AEF9E202692CB004F57F2 /* PhosphateSolid Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PhosphateSolid Medium.ttf"; path = "../../../../../Downloads/PhosphateSolid Medium/PhosphateSolid Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +59,24 @@
 		6D9AEF8820267AD5004F57F2 /* MAPD724_SlotMachine */ = {
 			isa = PBXGroup;
 			children = (
+				6D9AEF9D2026925B004F57F2 /* Font */,
 				6D9AEF8920267AD5004F57F2 /* AppDelegate.swift */,
 				6D9AEF8B20267AD5004F57F2 /* ViewController.swift */,
 				6D9AEF8D20267AD5004F57F2 /* Main.storyboard */,
 				6D9AEF9020267AD5004F57F2 /* Assets.xcassets */,
 				6D9AEF9220267AD5004F57F2 /* LaunchScreen.storyboard */,
 				6D9AEF9520267AD5004F57F2 /* Info.plist */,
+				6D9AEF9B202685CA004F57F2 /* BackgroundSet.swift */,
 			);
 			path = MAPD724_SlotMachine;
+			sourceTree = "<group>";
+		};
+		6D9AEF9D2026925B004F57F2 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				6D9AEF9E202692CB004F57F2 /* PhosphateSolid Medium.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +139,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D9AEF9420267AD5004F57F2 /* LaunchScreen.storyboard in Resources */,
+				6D9AEF9F202692CB004F57F2 /* PhosphateSolid Medium.ttf in Resources */,
 				6D9AEF9120267AD5004F57F2 /* Assets.xcassets in Resources */,
+				6D9AEFA020269366004F57F2 /* Info.plist in Resources */,
 				6D9AEF8F20267AD5004F57F2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D9AEF8C20267AD5004F57F2 /* ViewController.swift in Sources */,
+				6D9AEF9C202685CA004F57F2 /* BackgroundSet.swift in Sources */,
 				6D9AEF8A20267AD5004F57F2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
