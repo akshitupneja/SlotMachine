@@ -23,16 +23,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MachineSetup" translatesAutoresizingMaskIntoConstraints="NO" id="Wz4-F1-L1D">
-                                <rect key="frame" x="19" y="49" width="303" height="385"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MachineSetup" translatesAutoresizingMaskIntoConstraints="NO" id="Wz4-F1-L1D">
+                                <rect key="frame" x="20" y="50" width="303" height="409"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="single_mot" translatesAutoresizingMaskIntoConstraints="NO" id="n41-vB-E56">
-                                <rect key="frame" x="323" y="134" width="42" height="224"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="single_mot" translatesAutoresizingMaskIntoConstraints="NO" id="n41-vB-E56">
+                                <rect key="frame" x="323" y="154" width="42" height="207"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TRY AGAIN!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1V-BX-5cL">
-                                <rect key="frame" x="62" y="378" width="217" height="51"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TRY AGAIN!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1V-BX-5cL">
+                                <rect key="frame" x="62" y="389" width="223" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PhosphateSolid" family="PhosphateSolid" pointSize="36"/>
                                 <color key="textColor" red="1" green="0.87450980392156863" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,6 +38,14 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wz4-F1-L1D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1jq-dg-FBw"/>
+                            <constraint firstItem="n41-vB-E56" firstAttribute="leading" secondItem="Wz4-F1-L1D" secondAttribute="trailing" id="KOV-wb-UBe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wz4-F1-L1D" secondAttribute="trailing" constant="52" id="RL1-Ih-d7L"/>
+                            <constraint firstItem="n41-vB-E56" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="134" id="amf-cO-f2O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="n41-vB-E56" secondAttribute="bottom" constant="306" id="kDS-fM-fuI"/>
+                            <constraint firstItem="Wz4-F1-L1D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="n4n-oM-jvy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

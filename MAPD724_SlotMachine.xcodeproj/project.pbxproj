@@ -14,7 +14,6 @@
 		6D9AEF9420267AD5004F57F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D9AEF9220267AD5004F57F2 /* LaunchScreen.storyboard */; };
 		6D9AEF9C202685CA004F57F2 /* BackgroundSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9AEF9B202685CA004F57F2 /* BackgroundSet.swift */; };
 		6D9AEF9F202692CB004F57F2 /* PhosphateSolid Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D9AEF9E202692CB004F57F2 /* PhosphateSolid Medium.ttf */; };
-		6D9AEFA020269366004F57F2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D9AEF9520267AD5004F57F2 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,7 +140,6 @@
 				6D9AEF9420267AD5004F57F2 /* LaunchScreen.storyboard in Resources */,
 				6D9AEF9F202692CB004F57F2 /* PhosphateSolid Medium.ttf in Resources */,
 				6D9AEF9120267AD5004F57F2 /* Assets.xcassets in Resources */,
-				6D9AEFA020269366004F57F2 /* Info.plist in Resources */,
 				6D9AEF8F20267AD5004F57F2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
