@@ -23,6 +23,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rDt-Ie-WLc">
+                                <rect key="frame" x="31" y="175" width="280" height="165"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="EBj-QG-HTk"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="wVg-zJ-uPY"/>
+                                </connections>
+                            </pickerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="0Xs-uh-d07">
+                                <rect key="frame" x="39" y="235" width="266" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MachineSetup" translatesAutoresizingMaskIntoConstraints="NO" id="Wz4-F1-L1D">
                                 <rect key="frame" x="20" y="50" width="303" height="409"/>
                             </imageView>
@@ -56,6 +69,7 @@
     </scenes>
     <resources>
         <image name="MachineSetup" width="306" height="409"/>
+        <image name="Rectangle" width="267" height="42"/>
         <image name="single_mot" width="42" height="207"/>
     </resources>
 </document>
