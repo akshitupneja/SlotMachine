@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CF880BC202945090024159D /* PhosphateSolid Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CF880BB202945030024159D /* PhosphateSolid Medium.ttf */; };
 		6D9AEF8A20267AD5004F57F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9AEF8920267AD5004F57F2 /* AppDelegate.swift */; };
 		6D9AEF8C20267AD5004F57F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9AEF8B20267AD5004F57F2 /* ViewController.swift */; };
 		6D9AEF8F20267AD5004F57F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D9AEF8D20267AD5004F57F2 /* Main.storyboard */; };
 		6D9AEF9120267AD5004F57F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D9AEF9020267AD5004F57F2 /* Assets.xcassets */; };
 		6D9AEF9420267AD5004F57F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D9AEF9220267AD5004F57F2 /* LaunchScreen.storyboard */; };
 		6D9AEF9C202685CA004F57F2 /* BackgroundSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9AEF9B202685CA004F57F2 /* BackgroundSet.swift */; };
-		6D9AEF9F202692CB004F57F2 /* PhosphateSolid Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D9AEF9E202692CB004F57F2 /* PhosphateSolid Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5CF880BB202945030024159D /* PhosphateSolid Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PhosphateSolid Medium.ttf"; sourceTree = "<group>"; };
 		6D9AEF8620267AD5004F57F2 /* MAPD724_SlotMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAPD724_SlotMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D9AEF8920267AD5004F57F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D9AEF8B20267AD5004F57F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +26,6 @@
 		6D9AEF9320267AD5004F57F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D9AEF9520267AD5004F57F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D9AEF9B202685CA004F57F2 /* BackgroundSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSet.swift; sourceTree = "<group>"; };
-		6D9AEF9E202692CB004F57F2 /* PhosphateSolid Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PhosphateSolid Medium.ttf"; path = "../../../../../Downloads/PhosphateSolid Medium/PhosphateSolid Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +73,7 @@
 		6D9AEF9D2026925B004F57F2 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				6D9AEF9E202692CB004F57F2 /* PhosphateSolid Medium.ttf */,
+				5CF880BB202945030024159D /* PhosphateSolid Medium.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -138,7 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D9AEF9420267AD5004F57F2 /* LaunchScreen.storyboard in Resources */,
-				6D9AEF9F202692CB004F57F2 /* PhosphateSolid Medium.ttf in Resources */,
+				5CF880BC202945090024159D /* PhosphateSolid Medium.ttf in Resources */,
 				6D9AEF9120267AD5004F57F2 /* Assets.xcassets in Resources */,
 				6D9AEF8F20267AD5004F57F2 /* Main.storyboard in Resources */,
 			);
