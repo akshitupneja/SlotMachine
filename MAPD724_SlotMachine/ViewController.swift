@@ -33,7 +33,10 @@ class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDel
     var cash = 1000
     var bet = 0
     var jackpot = 0
-   
+    var player : AVAudioPlayer?
+    static let win_sound : String = "win"
+    static let spin_sound : String = "spin"
+
     
     
     
@@ -194,12 +197,12 @@ class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDel
             
         }
         else{
-            statusLabel.font = UIFont(name:"PhosphateSolid", size: 36.0)
+            statusLabel.font = UIFont(name:"Arial", size: 36.0)
             barHandle.isUserInteractionEnabled = false // disable clicking
             // animation of bandit handle
             self.animate(view: barHandle, images: #imageLiteral(resourceName: "mot").spriteSheet(cols: 14, rows: 1), duration: 0.3, repeatCount: 1)
             statusLabel.text = ""
-            // Model.instance.play(sound: Constant.spin_sound)
+             play(sound: Constant.spin_sound)
             roll()
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 self.checkResult()
@@ -222,7 +225,7 @@ class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDel
     
     // get random number
     func randomSelectRow(in comp : Int){
-        let r = Int(arc4random_uniform(UInt32(32 * images.count))) + images.count
+        let r = Int(arc4random_uniform(UInt32(images.count))) + images.count
 
         slotPicker.selectRow(r, inComponent: comp, animated: true)
         
@@ -274,5 +277,15 @@ class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDel
         betAmountLabel.text  = "$\(bet)"
         
     }
+    
+    // play sound
+    func play(sound name : String){
+        guard let url = Bundle.main.url(forResource: name, withExtension: "wav") else{
+            return
+        }
+        player = try? AVAudioPlayer(contentsOf: url)
+        player?.play()
+    }
+
 }
 
