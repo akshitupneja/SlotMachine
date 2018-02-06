@@ -223,7 +223,7 @@ class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDel
     
     // get random number
     func randomSelectRow(in comp : Int){
-        let r = Int(arc4random_uniform(UInt32(images.count))) + images.count
+        let r = Int(arc4random_uniform(UInt32(32 * images.count))) + images.count
 
         slotPicker.selectRow(r, inComponent: comp, animated: true)
         
