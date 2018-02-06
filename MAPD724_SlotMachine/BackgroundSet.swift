@@ -1,7 +1,10 @@
 //
 //  BackgroundSet.swift
 //  MAPD724_SlotMachine
-//
+//  Team Members:
+//  Akshit Upneja (300976590)
+//  santhosh damodharan (300964037)
+//  Amanpreet Kaur (300966930)
 //  Created by Akshit Upneja on 2018-02-03.
 //  Copyright © 2018 Centennial College. All rights reserved.
 //
