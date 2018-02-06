@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDelegate {
-
+    @IBOutlet weak var coin: UIImageView!
+    
     @IBOutlet weak var cashLabel: UILabel!
     
     @IBOutlet weak var barHandle: UIImageView!
@@ -107,6 +108,7 @@ class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDel
                 jackpot = bet * 10
         
         case exit :
+            UIControl().sendAction(#selector(NSXPCConnection.suspend), to: UIApplication.shared, for: nil)
                     cash = 1000
                     bet = 0
                     jackpot = 0
@@ -178,27 +180,36 @@ class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDel
     
     
     func spinAction(){
-        barHandle.isUserInteractionEnabled = false // disable clicking
-        // animation of bandit handle
-        self.animate(view: barHandle, images: #imageLiteral(resourceName: "mot").spriteSheet(cols: 14, rows: 1), duration: 0.3, repeatCount: 1)
-        statusLabel.text = ""
-       // Model.instance.play(sound: Constant.spin_sound)
-        roll()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            //self.checkWin()
-            //self.barImageView.isUserInteractionEnabled = true
+        if (bet == 0){
+            self.showAlertWithText(
+                header: "Bet Amount is 0",
+                message: "Please Bet some amount"
+            )
         }
+        else{
+
+            barHandle.isUserInteractionEnabled = false // disable clicking
+            // animation of bandit handle
+            self.animate(view: barHandle, images: #imageLiteral(resourceName: "mot").spriteSheet(cols: 14, rows: 1), duration: 0.3, repeatCount: 1)
+            statusLabel.text = ""
+            // Model.instance.play(sound: Constant.spin_sound)
+            roll()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.checkResult()
+                self.barHandle.isUserInteractionEnabled = true
+            }
+            
+        }
+        
         
     }
 
     func roll(){ // roll pickerview
-        var delay : TimeInterval = 3.0
         // iterate over each component, set random img
         for i in 0..<slotPicker.numberOfComponents{
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
+            DispatchQueue.main.asyncAfter(deadline: .now() , execute: {
                 self.randomSelectRow(in: i)
             })
-            //delay += 0.30
         }
     }
     
@@ -211,7 +222,40 @@ class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDel
     }
     
     
-
+// Result
+    func checkResult(){
+        var lastRow = -1
+        var counter = 0
+        
+        for i in 0..<slotPicker.numberOfComponents{
+            let row : Int = slotPicker.selectedRow(inComponent: i) % images.count // selected img idx
+            if lastRow == row{ // two equals indexes
+                counter += 1
+            } else {
+                lastRow = row
+                counter = 1
+            }
+        }
+        
+        if counter == 3{ // winning
+            //Model.instance.play(sound: Constant.win_sound)
+            //animate(view: machineImageView, images: [#imageLiteral(resourceName: "machine"),#imageLiteral(resourceName: "machine_off")], duration: 1, repeatCount: 15)
+            animate(view: coin, images: [#imageLiteral(resourceName: "Coin"),#imageLiteral(resourceName: "Coin")], duration: 1, repeatCount: 15)
+            
+            
+            statusLabel.text = "YOU WON \(jackpot)$"
+            cash = cash + jackpot
+           
+        } else { // losing
+            statusLabel.text = "TRY AGAIN"
+            bet = 0
+        }
+        
+        intializeValues()
+        
+        
+        
+    }
 
     
     //Initial Values
