@@ -10,6 +10,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var coin: UIImageView!
@@ -202,7 +203,7 @@ class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDel
             // animation of bandit handle
             self.animate(view: barHandle, images: #imageLiteral(resourceName: "mot").spriteSheet(cols: 14, rows: 1), duration: 0.3, repeatCount: 1)
             statusLabel.text = ""
-             play(sound: Constant.spin_sound)
+             play(sound: "spin")
             roll()
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 self.checkResult()
@@ -277,6 +278,7 @@ class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDel
         betAmountLabel.text  = "$\(bet)"
         
     }
+
     
     // play sound
     func play(sound name : String){
@@ -287,5 +289,7 @@ class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDel
         player?.play()
     }
 
+    
+    
 }
 
