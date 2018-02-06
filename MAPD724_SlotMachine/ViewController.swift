@@ -1,7 +1,10 @@
 //
 //  ViewController.swift
 //  MAPD724_SlotMachine
-//
+//  Team Members:
+//  Akshit Upneja (300976590)
+//  santhosh damodharan (300964037)
+//  Amanpreet Kaur (300966930)
 //  Created by Akshit Upneja on 2018-02-03.
 //  Copyright © 2018 Centennial College. All rights reserved.
 //
@@ -66,7 +69,7 @@ class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDel
             if (10 > cash){
                 self.showAlertWithText(
                     header: "Not Enough Credits",
-                    message: "Bet Less"
+                    message: ""
                 )
             }
             else{
@@ -78,7 +81,7 @@ class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDel
             if (50 > cash){
                 self.showAlertWithText(
                     header: "Not Enough Credits",
-                    message: "Bet Less"
+                    message: ""
                 )
             }
             else{
@@ -181,13 +184,16 @@ class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDel
     
     func spinAction(){
         if (bet == 0){
-            self.showAlertWithText(
-                header: "Bet Amount is 0",
-                message: "Please Bet some amount"
-            )
+//            self.showAlertWithText(
+//                header: "Bet Amount is 0",
+//                message: "Please Bet some amount"
+            statusLabel.font = UIFont(name:"Arial", size: 20.0)
+            statusLabel.text = "Please Select Bet Amount"
+            
+            
         }
         else{
-
+            statusLabel.font = UIFont(name:"PhosphateSolid", size: 36.0)
             barHandle.isUserInteractionEnabled = false // disable clicking
             // animation of bandit handle
             self.animate(view: barHandle, images: #imageLiteral(resourceName: "mot").spriteSheet(cols: 14, rows: 1), duration: 0.3, repeatCount: 1)
@@ -242,7 +248,7 @@ class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDel
             //animate(view: machineImageView, images: [#imageLiteral(resourceName: "machine"),#imageLiteral(resourceName: "machine_off")], duration: 1, repeatCount: 15)
             animate(view: coin, images: [#imageLiteral(resourceName: "Coin"),#imageLiteral(resourceName: "Coin")], duration: 1, repeatCount: 15)
             
-            
+            statusLabel.font = UIFont(name:"PhosphateSolid", size: 24.0)
             statusLabel.text = "YOU WON \(jackpot)$"
             cash = cash + jackpot
            
