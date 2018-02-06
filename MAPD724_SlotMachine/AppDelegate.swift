@@ -1,14 +1,12 @@
 //
 //  AppDelegate.swift
-//  MAPD724_SlotMachine
-//
-//  Team Members:
-//  Akshit Upneja (300976590)
-//  santhosh damodharan (300964037)
-//  Amanpreet Kaur (300966930)
-//  Copyright © 2018 Centennial College. All rights reserved.
-//
-
+/*
+ * Author's Name : Santhosh Damodharan, Akshit Upneja, Aman Preet Kaur
+ * Date : 2018-1-29
+ * StudentID : 300964037, 300976590, 300966930
+ * Description : Slot machine - A simple slot machine game
+ * Version : 1.0
+ */
 import UIKit
 
 @UIApplicationMain
