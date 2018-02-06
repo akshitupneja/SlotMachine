@@ -189,7 +189,7 @@ class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDel
 //            self.showAlertWithText(
 //                header: "Bet Amount is 0",
 //                message: "Please Bet some amount"
-             play(sound: "buzz")
+             play(sound: "Buzz")
             statusLabel.font = UIFont(name:"Arial", size: 20.0)
             statusLabel.text = "Please Select Bet Amount"
             
