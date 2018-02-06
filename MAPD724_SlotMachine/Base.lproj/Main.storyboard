@@ -45,9 +45,17 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="single_mot" translatesAutoresizingMaskIntoConstraints="NO" id="n41-vB-E56">
                                 <rect key="frame" x="326" y="154" width="42" height="207"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="207" id="Iyw-rN-G5z"/>
+                                    <constraint firstAttribute="width" constant="42" id="mqS-2M-q1B"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="yUZ-eN-7fe" appends="YES" id="mat-SE-z2n"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TRY AGAIN!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1V-BX-5cL">
-                                <rect key="frame" x="62" y="389" width="223" height="70"/>
+                                <rect key="frame" x="62" y="378" width="223" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PhosphateSolid" family="PhosphateSolid" pointSize="36"/>
                                 <color key="textColor" red="1" green="0.87450980392156863" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,11 +68,17 @@
                                     <constraint firstAttribute="height" constant="25" id="lON-Kd-WzW"/>
                                 </constraints>
                                 <state key="normal" image="Cross"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rJA-A4-Yni"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQu-sA-RUT">
                                 <rect key="frame" x="147" y="617" width="80" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="icons8-refresh-50"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="71N-1e-Dhy"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coin" translatesAutoresizingMaskIntoConstraints="NO" id="Vyb-R9-a3e">
                                 <rect key="frame" x="11" y="20" width="25" height="25"/>
@@ -98,14 +112,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$500000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycj-Ic-N33">
-                                <rect key="frame" x="25" y="491" width="159" height="48"/>
+                                <rect key="frame" x="25" y="496" width="159" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PhosphateSolid" family="PhosphateSolid" pointSize="32"/>
                                 <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zG5-rR-XVu">
-                                <rect key="frame" x="192" y="491" width="159" height="48"/>
+                                <rect key="frame" x="192" y="496" width="159" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PhosphateSolid" family="PhosphateSolid" pointSize="32"/>
                                 <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -115,21 +129,33 @@
                                 <rect key="frame" x="12" y="534" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="10dollars"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VfZ-g2-Da9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMW-Zv-5iJ">
                                 <rect key="frame" x="102" y="534" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="50dollars"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TNe-Tg-f4p"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVZ-8X-K1v">
                                 <rect key="frame" x="192" y="534" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="100dollars"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xRV-0F-nmZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jjs-cL-jlk">
                                 <rect key="frame" x="282" y="534" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="All"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9gO-GC-lPz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -150,8 +176,27 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="all" destination="Jjs-cL-jlk" id="Hfb-yI-Mj3"/>
+                        <outlet property="barHandle" destination="n41-vB-E56" id="GNn-bG-dBh"/>
+                        <outlet property="betAmountLabel" destination="zG5-rR-XVu" id="Mb9-jh-JGE"/>
+                        <outlet property="cashLabel" destination="c2l-gF-tte" id="1ZE-Qv-0SH"/>
+                        <outlet property="exit" destination="7gf-MX-Nka" id="s3W-D2-2J5"/>
+                        <outlet property="fiftyDollars" destination="KMW-Zv-5iJ" id="fvk-dl-Od7"/>
+                        <outlet property="hundredDollars" destination="wVZ-8X-K1v" id="Efn-w8-Kfi"/>
+                        <outlet property="jackpotLabel" destination="Ycj-Ic-N33" id="w3f-w2-7wd"/>
+                        <outlet property="reset" destination="ZQu-sA-RUT" id="CQu-4r-bkc"/>
+                        <outlet property="slotPicker" destination="rDt-Ie-WLc" id="QN9-Kr-4Dx"/>
+                        <outlet property="statusLabel" destination="J1V-BX-5cL" id="Fsq-KK-FRk"/>
+                        <outlet property="tenDollars" destination="WwU-EX-kzE" id="ZxE-DS-6gX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="yUZ-eN-7fe">
+                    <connections>
+                        <action selector="barAction:" destination="BYZ-38-t0r" id="4S0-XJ-3dY"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
