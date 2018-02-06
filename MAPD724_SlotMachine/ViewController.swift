@@ -109,6 +109,7 @@ class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDel
                 cash = cash + bet
                 bet = 0
                 jackpot = bet * 10
+                cash = 1000
         
         case exit :
             UIControl().sendAction(#selector(NSXPCConnection.suspend), to: UIApplication.shared, for: nil)
