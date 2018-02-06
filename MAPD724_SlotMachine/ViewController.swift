@@ -35,9 +35,6 @@ class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDel
     var bet = 0
     var jackpot = 0
     var player : AVAudioPlayer?
-    static let win_sound : String = "win"
-    static let spin_sound : String = "spin"
-
     
     
     
@@ -249,9 +246,10 @@ class ViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDel
         }
         
         if counter == 3{ // winning
-            //Model.instance.play(sound: Constant.win_sound)
-            //animate(view: machineImageView, images: [#imageLiteral(resourceName: "machine"),#imageLiteral(resourceName: "machine_off")], duration: 1, repeatCount: 15)
+            
             animate(view: coin, images: [#imageLiteral(resourceName: "Coin"),#imageLiteral(resourceName: "Coin")], duration: 1, repeatCount: 15)
+            play(sound: "winner")
+            //play(sound: "winner")
             
             statusLabel.font = UIFont(name:"PhosphateSolid", size: 24.0)
             statusLabel.text = "YOU WON \(jackpot)$"
